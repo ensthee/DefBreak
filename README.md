@@ -1,0 +1,2 @@
+# DefBreak
+DefBreak: Breaking Hardened Defenses with Adversarial Membership Inference on Vision-Language Models
