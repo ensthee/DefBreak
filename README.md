@@ -102,7 +102,17 @@ All experiments were conducted using multiple Conda environments under `minicond
 | umap | Feature visualization |
 | watermark / watermark_metric | Watermarking and metric evaluation |
 
+### Attack Target Models
 
+The DefBreak implementation and experiments target commonly used VLM backbones. The following model resources are used as attack targets (links point to the upstream model repos/pages):
+
+MiniGPT-4 — https://github.com/Vision-CAIR/MiniGPT-4/
+
+Qwen2-VL (example instruct checkpoint) — https://huggingface.co/Qwen/Qwen2-VL-7B-Instruct
+
+CogVLM2 — https://github.com/zai-org/CogVLM2
+
+DeepSeek-VL2 (tiny) — https://huggingface.co/deepseek-ai/deepseek-vl2-tiny
 ### Requirements
 
 * Python ≥ 3.8
