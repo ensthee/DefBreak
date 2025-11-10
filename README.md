@@ -197,12 +197,47 @@ Use `scripts/prepare_dataset.sh` to scan folders and produce `data.jsonl`.
 ## 6. Model Preparation
 
 DefBreak is model-agnostic provided the VLM can produce logits/probabilities or text outputs for a given image (and optional prompt). Supported model families (examples):
+### MiniGPT-4
+torchrun --nproc-per-node NUM_GPU train.py --cfg-path train_configs/minigptv2_finetune.yaml
 
-* MiniGPT-style
-* CogVLM2-style
-* DeepSeek-VL2-style
-* Qwen2-VL-style
+### DeepSeek-VL2 (full fine-tune)
+CUDA_VISIBLE_DEVICES=2 \
+swift sft \
+  --model /PATH/TO/models/deepseek-vl2-tiny \
+  --model_type deepseek_vl2 \
+  --train_type full \
+  --dataset /PATH/TO/datasets/cc_sbu_align/data.jsonl \
+  --learning_rate 1e-5 \
+  --output_dir /PATH/TO/finetuned_models/deepseek \
+  --num_train_epochs 1 \
+  --save_total_limit -1 \
+  --save_strategy epoch
 
+### Qwen2-VL (full fine-tune)
+CUDA_VISIBLE_DEVICES=3 \
+swift sft \
+  --model /PATH/TO/models/qwen2vl-2B-instruct \
+  --model_type qwen2_vl \
+  --train_type full \
+  --dataset /PATH/TO/datasets/coco2014_mini/data.jsonl \
+  --learning_rate 1e-5 \
+  --output_dir /PATH/TO/finetuned_models/qwen2 \
+  --num_train_epochs 1 \
+  --save_total_limit -1 \
+  --save_strategy epoch
+
+### CogVLM2 (full fine-tune)
+CUDA_VISIBLE_DEVICES=3 \
+swift sft \
+  --model /PATH/TO/models/cogvlm2-llama3-chat-19B \
+  --model_type cogvlm2 \
+  --train_type full \
+  --dataset /PATH/TO/datasets/user-level/prid_seperate/data.jsonl \
+  --learning_rate 1e-4 \
+  --output_dir /PATH/TO/finetuned_models/cogvlm2 \
+  --num_train_epochs 1 \
+  --save_total_limit -1 \
+  --save_strategy epoch
 Fine-tuning (full or adapter/LoRA) should be performed externally. Optionally merge adapters into a single checkpoint before running feature extraction:
 
 ```bash
