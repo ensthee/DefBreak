@@ -88,6 +88,21 @@ DefBreak/
 
 ## 4. Installation
 
+All experiments were conducted using multiple Conda environments under `miniconda3/envs/`.
+
+| Environment | Purpose |
+|--------------|----------|
+| baseline | Baseline evaluation setup |
+| cnn | CNN-based preprocessing pipeline |
+| cogvlm | CogVLM2 inference and feature extraction |
+| deepseek / deepseek-sft | DeepSeek-VL2 models (base / fine-tuned) |
+| minigpt | MiniGPT-4 experiments |
+| qwen | Qwen2-VL experiments |
+| swift / swift_ds | LoRA-based fine-tuning (Swift toolkit) |
+| umap | Feature visualization |
+| watermark / watermark_metric | Watermarking and metric evaluation |
+
+
 ### Requirements
 
 * Python ≥ 3.8
