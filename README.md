@@ -284,44 +284,6 @@ These iterate over model × dataset × attack configurations specified in `confi
 
 ---
 
-## 9. Relation to Existing VLM MIAs
-
-DefBreak unifies multiple signal types (top-K projection, uncertainty measures, aggregated statistics) and explicitly supports user-level inference. The repository includes scripts to compare DefBreak to representative baselines (VL-MIA, SPV-MIA, MaxRényi, etc.) and to generate comparison tables.
-
----
-
-## 10. Citation
-
-If you use DefBreak, please cite:
-
-```bibtex
-@article{defbreak,
-  title   = {DefBreak: Breaking Hardened Defenses with Adversarial Membership Inference on Vision--Language Models},
-  author  = {Kang, Hanwen and Li, Haozhe and Yao, Zhongjiang and others},
-  journal = {Preprint},
-  year    = {2025},
-  url     = {https://github.com/ensthee/DefBreak}
-}
-```
-
-Update `CITATION.bib` with final publication metadata when available.
-
----
-
-## 11. License
-
-This project is released under an open-source license. See `LICENSE` for exact terms.
-
----
-
-## 12. Contributing & Contact
-
-Contributions welcome:
-
-* Open issues for bugs / reproducibility problems.
-* Submit pull requests for new model adapters, dataset parsers, or evaluation features.
-* Keep PRs focused and include small runnable examples when possible.
-
 For questions or collaboration, open an issue in the repository:
 [https://github.com/ensthee/DefBreak](https://github.com/ensthee/DefBreak)
 
