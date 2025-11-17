@@ -352,12 +352,10 @@ python cogvlm2_user.py \
 Run DeepSeek-VL2 feature extraction
 ```
 python deepseek_user.py
-
 ```
 Run Qwen2-VL feature extraction
 ```
 python qwen2vl_user.py
-
 ```
 Before running, edit the configuration section in your script if needed:
 ```
