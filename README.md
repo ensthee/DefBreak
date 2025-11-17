@@ -69,10 +69,10 @@ DefBreak
 │   │       └── mlp.py
 │   └── feature_extraction
 │       ├── sample
-│       │   ├── cogvlm2_generate.py
-│       │   ├── deepseek_generate_perplexity.py
+│       │   ├── cogvlm2_sample.py
+│       │   ├── deepseek_sample.py
 │       │   ├── minigpt_sample.py
-│       │   └── qwen2vl_generate_perplexity.py
+│       │   └── qwen2vl_sample.py
 │       └── user
 │           ├── cogvlm2_user.py
 │           ├── deepseek_user.py
