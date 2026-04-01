@@ -377,13 +377,3 @@ python train_cnn.py \
   --learning_rate 3e-4
 ```
 ---
-
-## 8. Contact & Collaboration
-
-For questions, suggestions, or collaboration opportunities, please open an issue in the repository:
-
-https://github.com/ensthee/DefBreak
-
-We welcome contributions from the community.
-
----
