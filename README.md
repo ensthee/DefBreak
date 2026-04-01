@@ -1,6 +1,6 @@
 # DefBreak
 
-**DefBreak: Breaking Hardened Defenses with Adversarial Membership Inference on Vision–Language Models**
+**DefBreak: Adaptive Membership Inference Against Fine-Tuned Vision-Language Models at Sample and User Levels**
 
 > Code repository for the DefBreak framework.
 > DefBreak provides a unified, reproducible implementation of adversarial membership inference attacks (MIAs) against modern vision–language models (VLMs), covering both **sample-level** and **user-level** privacy leakage.
